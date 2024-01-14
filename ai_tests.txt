@@ -1,0 +1,17 @@
+>>> import tictactoe_bot as tb
+
+>>> board = [" "," "," "," "," "," "," "," "," "]
+
+>>> tb.ai_piece = "X"
+
+>>> tb.human_piece = "O"
+
+>>> board = ["O","X"," "," "," "," "," "," "," "]
+
+>>> tb.minimax(board, tb.ai_piece) # make sure to wait for it
+{'index': 2, 'score': 0} # this is found because the position is unwinnable with optimal play, and the zero-based index of 2 (square 3) is the first square it found that leads to a draw
+
+>>> board = [" "," "," "," "," "," "," "," "," "]
+
+>>> tb.minimax(board, tb.ai_piece) # make sure to wait for it to finish
+{'index': 0, 'score': 0}

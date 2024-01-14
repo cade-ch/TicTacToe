@@ -1,0 +1,88 @@
+>>> import tictactoe as t
+
+>>> t.game_board = [" "," "," "," "," "," "," "," "," "]
+
+>>> t.has_player_won(t.game_board)
+False
+
+>>> # Test all basic win conditions for X 
+>>> t.game_board = ["X","X","X"," "," "," "," "," "," "]
+
+>>> t.has_player_won(t.game_board)
+True
+
+>>> t.get_winning_player(t.game_board)
+'X'
+
+>>> t.game_board = [" "," "," ","X","X","X"," "," "," "]
+
+>>> t.has_player_won(t.game_board)
+True
+
+>>> t.game_board = [" "," "," "," "," "," ","X","X","X"]
+
+>>> t.has_player_won(t.game_board)
+True
+
+>>> t.game_board = ["X"," "," ","X"," "," ","X"," "," "]
+
+>>> t.has_player_won(t.game_board)
+True
+
+>>> t.game_board = [" ","X"," "," ","X"," "," ","X"," "]
+
+>>> t.has_player_won(t.game_board)
+True
+
+>>> t.game_board = [" "," ","X"," "," ","X"," "," ","X"]
+
+>>> t.has_player_won(t.game_board)
+True
+
+>>> t.game_board = ["X"," "," "," ","X"," "," "," ","X"]
+
+>>> t.has_player_won(t.game_board)
+True
+
+>>> t.game_board = [" "," ","X"," ","X"," ","X"," "," "]
+
+>>> t.has_player_won(t.game_board)
+True
+
+>>> # Test more complicated win conditions
+>>> t.game_board = ["O","O","O","O","X"," ","X","O","X"]
+
+>>> t.has_player_won(t.game_board)
+True
+
+>>> t.get_winning_player(t.game_board)
+'O'
+
+>>> # What if both players win (first one discovered takes priority)
+>>> t.game_board = ["O","O","O"," "," "," ","X","X","X"]
+
+>>> t.has_player_won(t.game_board)
+True
+
+>>> t.get_winning_player(t.game_board)
+'O'
+
+>>> # Test cat games
+>>> t.game_board = ["O","X","O","O","X","O","X","O","X"]
+
+>>> t.has_player_won(t.game_board)
+False
+
+>>> t.is_game_cat(t.game_board)
+True
+
+>>> t.get_winning_player(t.game_board)
+'Neither player'
+
+>>> t.game_board = ["O","O","O","O","X","O","X","O","X"]
+
+>>> t.has_player_won(t.game_board)
+True
+
+>>> t.is_game_cat(t.game_board)
+False
