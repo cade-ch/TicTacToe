@@ -2,6 +2,7 @@
 tictactoe.py lets you play a game of tic tac toe in the terminal.
 
 To run, `cd` to the `tic-tac-toe` directory and use the command `python tictactoe.py`
+NOTE: You must have python 3 installed
 
 To run tests, use the command `python -m doctest -v tests.txt`
 
